@@ -1,0 +1,942 @@
+EESchema Schematic File Version 4
+LIBS:WS2801_ledmodule_rev2-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L WS2801:WS2801 IC1
+U 1 1 5D65015F
+P 4300 5300
+F 0 "IC1" H 4300 5887 60  0000 C CNN
+F 1 "WS2801" H 4300 5781 60  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4300 5300 60  0001 C CNN
+F 3 "" H 4300 5300 60  0000 C CNN
+	1    4300 5300
+	1    0    0    -1  
+$EndComp
+Text Label 3500 5000 0    50   ~ 0
+Clock_In
+Text Label 3500 5100 0    50   ~ 0
+Data_In
+$Comp
+L power:GND #PWR0101
+U 1 1 5D651489
+P 3750 5750
+F 0 "#PWR0101" H 3750 5500 50  0001 C CNN
+F 1 "GND" H 3755 5577 50  0000 C CNN
+F 2 "" H 3750 5750 50  0001 C CNN
+F 3 "" H 3750 5750 50  0001 C CNN
+	1    3750 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5600 3750 5600
+Wire Wire Line
+	3750 5600 3750 5750
+Wire Wire Line
+	3850 5400 3750 5400
+Wire Wire Line
+	3850 5300 3750 5300
+Wire Wire Line
+	3850 5200 3750 5200
+$Comp
+L Device:C_Small C1
+U 1 1 5D653A5E
+P 5350 5600
+F 0 "C1" H 5442 5646 50  0000 L CNN
+F 1 "100n" H 5442 5555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5350 5600 50  0001 C CNN
+F 3 "~" H 5350 5600 50  0001 C CNN
+	1    5350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5D653C94
+P 5350 5750
+F 0 "#PWR0105" H 5350 5500 50  0001 C CNN
+F 1 "GND" H 5355 5577 50  0000 C CNN
+F 2 "" H 5350 5750 50  0001 C CNN
+F 3 "" H 5350 5750 50  0001 C CNN
+	1    5350 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 5500 5000 5500
+Wire Wire Line
+	4750 5600 5000 5600
+Wire Wire Line
+	4750 5400 5000 5400
+Text Label 4800 5400 0    50   ~ 0
+LED1
+Text Label 4800 5500 0    50   ~ 0
+LED2
+Text Label 4800 5600 0    50   ~ 0
+LED3
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D753255
+P 6200 6750
+F 0 "H1" H 6300 6796 50  0000 L CNN
+F 1 "MountingHole" H 6300 6705 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6200 6750 50  0001 C CNN
+F 3 "~" H 6200 6750 50  0001 C CNN
+	1    6200 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D7532D7
+P 6200 6950
+F 0 "H2" H 6300 6996 50  0000 L CNN
+F 1 "MountingHole" H 6300 6905 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6200 6950 50  0001 C CNN
+F 3 "~" H 6200 6950 50  0001 C CNN
+	1    6200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5D753F48
+P 6200 7250
+F 0 "H3" H 6300 7296 50  0000 L CNN
+F 1 "MountingHole" H 6300 7205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6200 7250 50  0001 C CNN
+F 3 "~" H 6200 7250 50  0001 C CNN
+	1    6200 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5D753F4F
+P 6200 7450
+F 0 "H4" H 6300 7496 50  0000 L CNN
+F 1 "MountingHole" H 6300 7405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 6200 7450 50  0001 C CNN
+F 3 "~" H 6200 7450 50  0001 C CNN
+	1    6200 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5D65CA38
+P 1350 5050
+F 0 "R8" H 1200 5000 50  0000 C CNN
+F 1 "2k2" H 1200 5100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1280 5050 50  0001 C CNN
+F 3 "~" H 1350 5050 50  0001 C CNN
+	1    1350 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Zener_Small Z1
+U 1 1 5D65D1AB
+P 1350 5600
+F 0 "Z1" V 1304 5668 50  0000 L CNN
+F 1 "5v1" V 1395 5668 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" V 1350 5600 50  0001 C CNN
+F 3 "~" V 1350 5600 50  0001 C CNN
+	1    1350 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D65D407
+P 1350 5750
+F 0 "#PWR02" H 1350 5500 50  0001 C CNN
+F 1 "GND" H 1355 5577 50  0000 C CNN
+F 2 "" H 1350 5750 50  0001 C CNN
+F 3 "" H 1350 5750 50  0001 C CNN
+	1    1350 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR01
+U 1 1 5D65D562
+P 1350 4700
+F 0 "#PWR01" H 1365 4965 50  0001 C CNN
+F 1 "+12V" H 1365 4873 50  0000 C CNN
+F 2 "" H 1350 4700 50  0001 C CNN
+F 3 "" H 1350 4700 50  0001 C CNN
+	1    1350 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 4700 1350 4900
+Wire Wire Line
+	1350 5700 1350 5750
+Wire Wire Line
+	5350 5700 5350 5750
+Wire Wire Line
+	3750 5200 3750 5300
+Wire Wire Line
+	3750 5300 3750 5400
+Connection ~ 3750 5300
+Wire Wire Line
+	3750 5400 3750 5500
+Connection ~ 3750 5400
+Connection ~ 3750 5600
+Wire Wire Line
+	3850 5500 3750 5500
+Connection ~ 3750 5500
+Wire Wire Line
+	3750 5500 3750 5600
+Wire Wire Line
+	1350 5200 1350 5350
+$Comp
+L WS2801:WS2801 IC2
+U 1 1 5DE8E441
+P 6600 5300
+F 0 "IC2" H 6600 5887 60  0000 C CNN
+F 1 "WS2801" H 6600 5781 60  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6600 5300 60  0001 C CNN
+F 3 "" H 6600 5300 60  0000 C CNN
+	1    6600 5300
+	1    0    0    -1  
+$EndComp
+Text Label 7100 5100 0    50   ~ 0
+Clock_Out
+Text Label 7100 5200 0    50   ~ 0
+Data_Out
+$Comp
+L power:GND #PWR019
+U 1 1 5DE8E450
+P 6050 5750
+F 0 "#PWR019" H 6050 5500 50  0001 C CNN
+F 1 "GND" H 6055 5577 50  0000 C CNN
+F 2 "" H 6050 5750 50  0001 C CNN
+F 3 "" H 6050 5750 50  0001 C CNN
+	1    6050 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5600 6050 5600
+Wire Wire Line
+	6050 5600 6050 5750
+Wire Wire Line
+	6150 5400 6050 5400
+Wire Wire Line
+	6150 5300 6050 5300
+Wire Wire Line
+	6150 5200 6050 5200
+Wire Wire Line
+	7050 5500 7300 5500
+Wire Wire Line
+	7050 5600 7300 5600
+Wire Wire Line
+	7050 5400 7300 5400
+Text Label 7100 5400 0    50   ~ 0
+LED4
+Text Label 7100 5500 0    50   ~ 0
+LED5
+Text Label 7100 5600 0    50   ~ 0
+LED6
+Wire Wire Line
+	6050 5200 6050 5300
+Wire Wire Line
+	6050 5300 6050 5400
+Connection ~ 6050 5300
+Wire Wire Line
+	6050 5400 6050 5500
+Connection ~ 6050 5400
+Connection ~ 6050 5600
+Wire Wire Line
+	6150 5500 6050 5500
+Connection ~ 6050 5500
+Wire Wire Line
+	6050 5500 6050 5600
+Wire Wire Line
+	4750 5100 5450 5100
+Wire Wire Line
+	5450 5100 5450 5000
+Wire Wire Line
+	5450 5000 6150 5000
+Wire Wire Line
+	4750 5200 5550 5200
+Wire Wire Line
+	5550 5200 5550 5100
+Wire Wire Line
+	5550 5100 6150 5100
+$Comp
+L Device:C_Small C2
+U 1 1 5DE90570
+P 7700 5650
+F 0 "C2" H 7792 5696 50  0000 L CNN
+F 1 "100n" H 7792 5605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 5650 50  0001 C CNN
+F 3 "~" H 7700 5650 50  0001 C CNN
+	1    7700 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5DE90577
+P 7700 5800
+F 0 "#PWR020" H 7700 5550 50  0001 C CNN
+F 1 "GND" H 7705 5627 50  0000 C CNN
+F 2 "" H 7700 5800 50  0001 C CNN
+F 3 "" H 7700 5800 50  0001 C CNN
+	1    7700 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 5750 7700 5800
+Wire Wire Line
+	4750 5000 5350 5000
+Wire Wire Line
+	5350 5000 5350 5500
+Wire Wire Line
+	7050 5000 7700 5000
+Wire Wire Line
+	7700 5000 7700 5550
+$Comp
+L Connector:Conn_01x04_Male J9
+U 1 1 5DE92CB8
+P 2700 5000
+F 0 "J9" H 2806 5278 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 2806 5187 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal" H 2700 5000 50  0001 C CNN
+F 3 "~" H 2700 5000 50  0001 C CNN
+	1    2700 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5DE96C94
+P 3050 5750
+F 0 "#PWR018" H 3050 5500 50  0001 C CNN
+F 1 "GND" H 3055 5577 50  0000 C CNN
+F 2 "" H 3050 5750 50  0001 C CNN
+F 3 "" H 3050 5750 50  0001 C CNN
+	1    3050 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 5200 3050 5200
+Wire Wire Line
+	3050 5200 3050 5750
+$Comp
+L power:GND #PWR021
+U 1 1 5DE97C33
+P 8250 5800
+F 0 "#PWR021" H 8250 5550 50  0001 C CNN
+F 1 "GND" H 8255 5627 50  0000 C CNN
+F 2 "" H 8250 5800 50  0001 C CNN
+F 3 "" H 8250 5800 50  0001 C CNN
+	1    8250 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 5300 8250 5300
+Wire Wire Line
+	8250 5300 8250 5800
+Wire Wire Line
+	2900 4900 3050 4900
+Wire Wire Line
+	3050 4900 3050 4550
+Wire Wire Line
+	8250 5000 8250 4550
+Wire Wire Line
+	1350 5350 1800 5350
+Connection ~ 1350 5350
+Wire Wire Line
+	1350 5350 1350 5500
+Text Label 1650 5350 0    50   ~ 0
+Vcc
+Text Label 8250 4750 1    50   ~ 0
+Vcc
+Text Label 3050 4700 1    50   ~ 0
+Vcc
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5E1600AC
+P 1700 2650
+F 0 "J1" H 1806 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1806 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 1700 2650 50  0001 C CNN
+F 3 "~" H 1700 2650 50  0001 C CNN
+	1    1700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR03
+U 1 1 5E160159
+P 2150 2350
+F 0 "#PWR03" H 2165 2615 50  0001 C CNN
+F 1 "+12V" H 2165 2523 50  0000 C CNN
+F 2 "" H 2150 2350 50  0001 C CNN
+F 3 "" H 2150 2350 50  0001 C CNN
+	1    2150 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E160184
+P 2150 3000
+F 0 "#PWR010" H 2150 2750 50  0001 C CNN
+F 1 "GND" H 2155 2827 50  0000 C CNN
+F 2 "" H 2150 3000 50  0001 C CNN
+F 3 "" H 2150 3000 50  0001 C CNN
+	1    2150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2750 2150 2750
+Wire Wire Line
+	2150 2750 2150 3000
+Wire Wire Line
+	1900 2650 2150 2650
+Wire Wire Line
+	2150 2650 2150 2350
+$Comp
+L Transistor_FET:IRF7309IPBF Q1
+U 1 1 5E162F33
+P 3450 3500
+F 0 "Q1" H 3300 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 3700 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3650 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 3450 3500 50  0001 L CNN
+	1    3450 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7309IPBF Q1
+U 2 1 5E162FBB
+P 4350 3500
+F 0 "Q1" H 4200 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 4600 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4550 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 4350 3500 50  0001 L CNN
+	2    4350 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E1636B7
+P 3150 3250
+F 0 "R1" H 3000 3200 50  0000 C CNN
+F 1 "10k" H 3000 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3080 3250 50  0001 C CNN
+F 3 "~" H 3150 3250 50  0001 C CNN
+	1    3150 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 3500 3150 3500
+Wire Wire Line
+	3550 3700 3550 3850
+$Comp
+L power:GND #PWR012
+U 1 1 5E169740
+P 3550 3850
+F 0 "#PWR012" H 3550 3600 50  0001 C CNN
+F 1 "GND" H 3555 3677 50  0000 C CNN
+F 2 "" H 3550 3850 50  0001 C CNN
+F 3 "" H 3550 3850 50  0001 C CNN
+	1    3550 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E16976B
+P 4450 3850
+F 0 "#PWR013" H 4450 3600 50  0001 C CNN
+F 1 "GND" H 4455 3677 50  0000 C CNN
+F 2 "" H 4450 3850 50  0001 C CNN
+F 3 "" H 4450 3850 50  0001 C CNN
+	1    4450 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3700 4450 3850
+Wire Wire Line
+	3550 2750 3550 3300
+Wire Wire Line
+	3150 3400 3150 3500
+Connection ~ 3150 3500
+Wire Wire Line
+	3150 3500 2900 3500
+Text Label 2900 3500 0    50   ~ 0
+LED1
+Wire Wire Line
+	3150 2950 3150 3100
+Text Label 3150 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	3450 2750 3550 2750
+$Comp
+L power:+12V #PWR0102
+U 1 1 5D6515D8
+P 3550 2350
+F 0 "#PWR0102" H 3565 2615 50  0001 C CNN
+F 1 "+12V" H 3565 2523 50  0000 C CNN
+F 2 "" H 3550 2350 50  0001 C CNN
+F 3 "" H 3550 2350 50  0001 C CNN
+	1    3550 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2650 3550 2350
+Wire Wire Line
+	3450 2650 3550 2650
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5E16C9AB
+P 3250 2650
+F 0 "J2" H 3356 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 3356 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 3250 2650 50  0001 C CNN
+F 3 "~" H 3250 2650 50  0001 C CNN
+	1    3250 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E17EEEC
+P 4050 3250
+F 0 "R2" H 3900 3200 50  0000 C CNN
+F 1 "10k" H 3900 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3980 3250 50  0001 C CNN
+F 3 "~" H 4050 3250 50  0001 C CNN
+	1    4050 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 3500 4050 3500
+Wire Wire Line
+	4050 3400 4050 3500
+Connection ~ 4050 3500
+Wire Wire Line
+	4050 3500 3800 3500
+Text Label 3800 3500 0    50   ~ 0
+LED2
+Wire Wire Line
+	4050 2950 4050 3100
+Text Label 4050 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	4450 2750 4450 3300
+Wire Wire Line
+	4350 2750 4450 2750
+$Comp
+L power:+12V #PWR04
+U 1 1 5E180723
+P 4450 2350
+F 0 "#PWR04" H 4465 2615 50  0001 C CNN
+F 1 "+12V" H 4465 2523 50  0000 C CNN
+F 2 "" H 4450 2350 50  0001 C CNN
+F 3 "" H 4450 2350 50  0001 C CNN
+	1    4450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2650 4450 2350
+Wire Wire Line
+	4350 2650 4450 2650
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5E18072B
+P 4150 2650
+F 0 "J3" H 4256 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4256 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 4150 2650 50  0001 C CNN
+F 3 "~" H 4150 2650 50  0001 C CNN
+	1    4150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7309IPBF Q2
+U 1 1 5E1A1D16
+P 5250 3500
+F 0 "Q2" H 5100 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 5500 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5450 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 5250 3500 50  0001 L CNN
+	1    5250 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7309IPBF Q2
+U 2 1 5E1A1D1D
+P 6150 3500
+F 0 "Q2" H 6000 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 6400 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 6150 3500 50  0001 L CNN
+	2    6150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E1A1D24
+P 4950 3250
+F 0 "R3" H 4800 3200 50  0000 C CNN
+F 1 "10k" H 4800 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4880 3250 50  0001 C CNN
+F 3 "~" H 4950 3250 50  0001 C CNN
+	1    4950 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 3500 4950 3500
+Wire Wire Line
+	5350 3700 5350 3850
+$Comp
+L power:GND #PWR014
+U 1 1 5E1A1D2D
+P 5350 3850
+F 0 "#PWR014" H 5350 3600 50  0001 C CNN
+F 1 "GND" H 5355 3677 50  0000 C CNN
+F 2 "" H 5350 3850 50  0001 C CNN
+F 3 "" H 5350 3850 50  0001 C CNN
+	1    5350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5E1A1D33
+P 6250 3850
+F 0 "#PWR015" H 6250 3600 50  0001 C CNN
+F 1 "GND" H 6255 3677 50  0000 C CNN
+F 2 "" H 6250 3850 50  0001 C CNN
+F 3 "" H 6250 3850 50  0001 C CNN
+	1    6250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3700 6250 3850
+Wire Wire Line
+	5350 2750 5350 3300
+Wire Wire Line
+	4950 3400 4950 3500
+Connection ~ 4950 3500
+Wire Wire Line
+	4950 3500 4700 3500
+Text Label 4700 3500 0    50   ~ 0
+LED3
+Wire Wire Line
+	4950 2950 4950 3100
+Text Label 4950 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	5250 2750 5350 2750
+$Comp
+L power:+12V #PWR05
+U 1 1 5E1A1D42
+P 5350 2350
+F 0 "#PWR05" H 5365 2615 50  0001 C CNN
+F 1 "+12V" H 5365 2523 50  0000 C CNN
+F 2 "" H 5350 2350 50  0001 C CNN
+F 3 "" H 5350 2350 50  0001 C CNN
+	1    5350 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2650 5350 2350
+Wire Wire Line
+	5250 2650 5350 2650
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5E1A1D4A
+P 5050 2650
+F 0 "J4" H 5156 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 5156 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 5050 2650 50  0001 C CNN
+F 3 "~" H 5050 2650 50  0001 C CNN
+	1    5050 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E1A1D51
+P 5850 3250
+F 0 "R4" H 5700 3200 50  0000 C CNN
+F 1 "10k" H 5700 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5780 3250 50  0001 C CNN
+F 3 "~" H 5850 3250 50  0001 C CNN
+	1    5850 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 3500 5850 3500
+Wire Wire Line
+	5850 3400 5850 3500
+Connection ~ 5850 3500
+Wire Wire Line
+	5850 3500 5600 3500
+Text Label 5600 3500 0    50   ~ 0
+LED4
+Wire Wire Line
+	5850 2950 5850 3100
+Text Label 5850 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	6250 2750 6250 3300
+Wire Wire Line
+	6150 2750 6250 2750
+$Comp
+L power:+12V #PWR06
+U 1 1 5E1A1D61
+P 6250 2350
+F 0 "#PWR06" H 6265 2615 50  0001 C CNN
+F 1 "+12V" H 6265 2523 50  0000 C CNN
+F 2 "" H 6250 2350 50  0001 C CNN
+F 3 "" H 6250 2350 50  0001 C CNN
+	1    6250 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2650 6250 2350
+Wire Wire Line
+	6150 2650 6250 2650
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5E1A1D69
+P 5950 2650
+F 0 "J5" H 6056 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6056 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 5950 2650 50  0001 C CNN
+F 3 "~" H 5950 2650 50  0001 C CNN
+	1    5950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7309IPBF Q3
+U 1 1 5E1A446F
+P 7050 3500
+F 0 "Q3" H 6900 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 7300 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7250 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 7050 3500 50  0001 L CNN
+	1    7050 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRF7309IPBF Q3
+U 2 1 5E1A4476
+P 7950 3500
+F 0 "Q3" H 7800 3650 50  0000 L CNN
+F 1 "IRF7301PBF" V 8200 3300 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8150 3425 50  0001 L CNN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf" H 7950 3500 50  0001 L CNN
+	2    7950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E1A447D
+P 6750 3250
+F 0 "R5" H 6600 3200 50  0000 C CNN
+F 1 "10k" H 6600 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6680 3250 50  0001 C CNN
+F 3 "~" H 6750 3250 50  0001 C CNN
+	1    6750 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6850 3500 6750 3500
+Wire Wire Line
+	7150 3700 7150 3850
+$Comp
+L power:GND #PWR016
+U 1 1 5E1A4486
+P 7150 3850
+F 0 "#PWR016" H 7150 3600 50  0001 C CNN
+F 1 "GND" H 7155 3677 50  0000 C CNN
+F 2 "" H 7150 3850 50  0001 C CNN
+F 3 "" H 7150 3850 50  0001 C CNN
+	1    7150 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5E1A448C
+P 8050 3850
+F 0 "#PWR017" H 8050 3600 50  0001 C CNN
+F 1 "GND" H 8055 3677 50  0000 C CNN
+F 2 "" H 8050 3850 50  0001 C CNN
+F 3 "" H 8050 3850 50  0001 C CNN
+	1    8050 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3700 8050 3850
+Wire Wire Line
+	7150 2750 7150 3300
+Wire Wire Line
+	6750 3400 6750 3500
+Connection ~ 6750 3500
+Wire Wire Line
+	6750 3500 6500 3500
+Text Label 6500 3500 0    50   ~ 0
+LED5
+Wire Wire Line
+	6750 2950 6750 3100
+Text Label 6750 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	7050 2750 7150 2750
+$Comp
+L power:+12V #PWR07
+U 1 1 5E1A449B
+P 7150 2350
+F 0 "#PWR07" H 7165 2615 50  0001 C CNN
+F 1 "+12V" H 7165 2523 50  0000 C CNN
+F 2 "" H 7150 2350 50  0001 C CNN
+F 3 "" H 7150 2350 50  0001 C CNN
+	1    7150 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2650 7150 2350
+Wire Wire Line
+	7050 2650 7150 2650
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5E1A44A3
+P 6850 2650
+F 0 "J6" H 6956 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6956 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 6850 2650 50  0001 C CNN
+F 3 "~" H 6850 2650 50  0001 C CNN
+	1    6850 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5E1A44AA
+P 7650 3250
+F 0 "R6" H 7500 3200 50  0000 C CNN
+F 1 "10k" H 7500 3300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 3250 50  0001 C CNN
+F 3 "~" H 7650 3250 50  0001 C CNN
+	1    7650 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3500 7650 3500
+Wire Wire Line
+	7650 3400 7650 3500
+Connection ~ 7650 3500
+Wire Wire Line
+	7650 3500 7400 3500
+Text Label 7400 3500 0    50   ~ 0
+LED6
+Wire Wire Line
+	7650 2950 7650 3100
+Text Label 7650 3100 1    50   ~ 0
+Vcc
+Wire Wire Line
+	8050 2750 8050 3300
+Wire Wire Line
+	7950 2750 8050 2750
+$Comp
+L power:+12V #PWR08
+U 1 1 5E1A44BA
+P 8050 2350
+F 0 "#PWR08" H 8065 2615 50  0001 C CNN
+F 1 "+12V" H 8065 2523 50  0000 C CNN
+F 2 "" H 8050 2350 50  0001 C CNN
+F 3 "" H 8050 2350 50  0001 C CNN
+	1    8050 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2650 8050 2350
+Wire Wire Line
+	7950 2650 8050 2650
+$Comp
+L Connector:Conn_01x02_Male J7
+U 1 1 5E1A44C2
+P 7750 2650
+F 0 "J7" H 7856 2828 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 7856 2737 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 7750 2650 50  0001 C CNN
+F 3 "~" H 7750 2650 50  0001 C CNN
+	1    7750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J8
+U 1 1 5E1B13B7
+P 9400 2650
+F 0 "J8" H 9373 2623 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 9373 2532 50  0000 R CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_bornier-2_P5.08mm" H 9400 2650 50  0001 C CNN
+F 3 "~" H 9400 2650 50  0001 C CNN
+	1    9400 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR09
+U 1 1 5E1B13BE
+P 8950 2350
+F 0 "#PWR09" H 8965 2615 50  0001 C CNN
+F 1 "+12V" H 8965 2523 50  0000 C CNN
+F 2 "" H 8950 2350 50  0001 C CNN
+F 3 "" H 8950 2350 50  0001 C CNN
+	1    8950 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5E1B13C4
+P 8950 3050
+F 0 "#PWR011" H 8950 2800 50  0001 C CNN
+F 1 "GND" H 8955 2877 50  0000 C CNN
+F 2 "" H 8950 3050 50  0001 C CNN
+F 3 "" H 8950 3050 50  0001 C CNN
+	1    8950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 2750 8950 2750
+Wire Wire Line
+	8950 2750 8950 3050
+Wire Wire Line
+	9200 2650 8950 2650
+Wire Wire Line
+	8950 2650 8950 2350
+$Comp
+L Connector:Conn_01x04_Male J10
+U 1 1 5E1F0652
+P 8700 5100
+F 0 "J10" H 8806 5378 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 8806 5287 50  0000 C CNN
+F 2 "TerminalBlock_longpads:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal" H 8700 5100 50  0001 C CNN
+F 3 "~" H 8700 5100 50  0001 C CNN
+	1    8700 5100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 5000 7700 4550
+Connection ~ 7700 5000
+Wire Wire Line
+	5350 5000 5350 4550
+Connection ~ 5350 5000
+Text Label 5350 4700 1    50   ~ 0
+Vcc
+Text Label 7700 4700 1    50   ~ 0
+Vcc
+Wire Wire Line
+	8500 5000 8250 5000
+Wire Wire Line
+	2900 5000 3850 5000
+Wire Wire Line
+	2900 5100 3850 5100
+Wire Wire Line
+	7050 5100 8500 5100
+Wire Wire Line
+	7050 5200 8500 5200
+$EndSCHEMATC
