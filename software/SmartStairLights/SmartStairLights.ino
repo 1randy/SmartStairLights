@@ -1,8 +1,10 @@
 #include <FastLED.h>
 
-#define VERSION 2020032701
+#define VERSION 2020042001
 
 // define sendor input pins
+#define INPUT_PIN_1_PULLUP      // enable pullup for switche (not needed for PIR/IR)
+#define INPUT_PIN_2_PULLUP      // enable pullup for switche (not needed for PIR/IR)
 #define INPUT_PIN_1     A0      // 18 A0
 #define INPUT_PIN_2     A1      // 19 A1
 
@@ -24,6 +26,7 @@
 #define FADE_WAIT       2       // speed of LED dimming
 #define FADE_STEP       20      // steps of LED brightness levels
 
+#define SENSOR_WAIT     5000    // how long the pir sensor should be blocked
 CRGB leds[NUM_LEDS];
 
 void setup() {
@@ -31,8 +34,12 @@ void setup() {
 
     pinMode(INPUT_PIN_1, INPUT);           // set pin to input
     pinMode(INPUT_PIN_2, INPUT);           // set pin to input
+#ifdef INPUT_PIN_1_PULLUP
     digitalWrite(INPUT_PIN_1, HIGH);       // turn on pullup resistors
+#endif
+#ifdef INPUT_PIN_2_PULLUP
     digitalWrite(INPUT_PIN_2, HIGH);       // turn on pullup resistors
+#endif
 
     FastLED.addLeds<CHIPSET, DATA_PIN, CLOCK_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
 
@@ -92,16 +99,31 @@ void FadeSequenceBackward(bool led_on) {
   delay(WAIT);
 }
 
+bool readInput1() {
+#ifdef INPUT_PIN_1_PULLUP
+  return (!digitalRead(INPUT_PIN_1));
+#else
+  return (digitalRead(INPUT_PIN_1));
+#endif
+}
+
+bool readInput2() {
+#ifdef INPUT_PIN_2_PULLUP
+  return (!digitalRead(INPUT_PIN_2));
+#else
+  return (digitalRead(INPUT_PIN_2);
+#endif
+}
 void loop()
 {
   uint16_t wait_timout = 0;
 
-  // forward sequence 1 -> MAX_LED
-  if (!digitalRead(INPUT_PIN_1)) {
+// forward sequence 1 -> MAX_LED
+  if (readInput1()) {
     Serial.println("start sequence on event1");
     FadeSequenceForward(1);
-    while(digitalRead(INPUT_PIN_2) && wait_timout < WAIT_PIN_MAXW) {
-      if (!digitalRead(INPUT_PIN_1)) {
+    while(!readInput2() && wait_timout < WAIT_PIN_MAXW) {
+      if (readInput1()) {
         wait_timout = 0;
       } else {
         wait_timout++;
@@ -110,14 +132,15 @@ void loop()
     }
     Serial.println("stop sequence on event2");
     FadeSequenceForward(0);
+    delay(SENSOR_WAIT);
   }
   
   // backward sequence MAX_LED -> 1
-  if (!digitalRead(INPUT_PIN_2)) {
+  if (readInput2()) {
     Serial.println("start sequence on event2");
     FadeSequenceBackward(1);
-    while(digitalRead(INPUT_PIN_1) && wait_timout < WAIT_PIN_MAXW) {
-      if (!digitalRead(INPUT_PIN_2)) {
+    while(!readInput1() && wait_timout < WAIT_PIN_MAXW) {
+      if (readInput2()) {
         wait_timout = 0;
       } else {
         wait_timout++;
@@ -126,6 +149,6 @@ void loop()
     }
     Serial.println("stop sequence on event1");
     FadeSequenceBackward(0);
+    delay(SENSOR_WAIT);
   }
-
 } // END main loop
